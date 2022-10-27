@@ -1,3 +1,5 @@
+import 'package:demo_flutter_app/utils/item_card.dart';
+import 'package:demo_flutter_app/utils/item_card_row.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -255,6 +257,37 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "What help do you need?",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 22),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Expanded(
+                    child: ListView(
+                      children: const [
+                        ItemcardRow(),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        ItemcardRow(),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        ItemcardRow()
                       ],
                     ),
                   )
